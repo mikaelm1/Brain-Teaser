@@ -23,7 +23,7 @@
                                 <rect key="frame" x="30" y="50" width="540" height="520"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brain" translatesAutoresizingMaskIntoConstraints="NO" id="oox-6M-5XX">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="306.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="321.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="oox-6M-5XX" secondAttribute="height" multiplier="54:37" id="uJs-N7-0rZ"/>
                                         </constraints>
@@ -33,26 +33,38 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBD-xg-Exi">
-                                        <rect key="frame" x="0.0" y="326.5" width="540" height="51"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBD-xg-Exi" customClass="CustomTextField" customModule="Brain_Teaser" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="341.5" width="540" height="46"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uBD-xg-Exi" secondAttribute="height" multiplier="20:1" id="tcM-hZ-Mrb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="tcM-hZ-Mrb"/>
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vij-w4-3hk">
-                                        <rect key="frame" x="0.0" y="397.5" width="540" height="51.5"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vij-w4-3hk" customClass="CustomTextField" customModule="Brain_Teaser" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="407.5" width="540" height="46.5"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M4-aZ-VfG">
-                                        <rect key="frame" x="0.0" y="469" width="540" height="51"/>
+                                        <rect key="frame" x="0.0" y="474" width="540" height="46"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,7 +73,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vij-w4-3hk" firstAttribute="height" secondItem="uBD-xg-Exi" secondAttribute="height" id="7wb-LE-dzY"/>
-                                    <constraint firstItem="oox-6M-5XX" firstAttribute="height" secondItem="uBD-xg-Exi" secondAttribute="height" multiplier="6" id="FTI-4R-8zR"/>
+                                    <constraint firstItem="oox-6M-5XX" firstAttribute="height" secondItem="uBD-xg-Exi" secondAttribute="height" multiplier="7" id="FTI-4R-8zR"/>
                                     <constraint firstItem="3M4-aZ-VfG" firstAttribute="height" secondItem="vij-w4-3hk" secondAttribute="height" id="N2U-yi-B1F"/>
                                 </constraints>
                             </stackView>

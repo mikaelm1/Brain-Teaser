@@ -12,6 +12,7 @@
 		706A14181CD6499800B7ED4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A14161CD6499800B7ED4C /* Main.storyboard */; };
 		706A141A1CD6499800B7ED4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A14191CD6499800B7ED4C /* Assets.xcassets */; };
 		706A141D1CD6499800B7ED4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A141B1CD6499800B7ED4C /* LaunchScreen.storyboard */; };
+		706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142A1CD6621A00B7ED4C /* CustomTextField.swift */; };
 		DCCD6DA82B41C81CA1B63C69 /* Pods_Brain_Teaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		706A141C1CD6499800B7ED4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		706A141E1CD6499800B7ED4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706A14241CD64A7100B7ED4C /* Brain Teaser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brain Teaser-Bridging-Header.h"; sourceTree = "<group>"; };
+		706A142A1CD6621A00B7ED4C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brain_Teaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,8 +73,10 @@
 		706A14111CD6499700B7ED4C /* Brain Teaser */ = {
 			isa = PBXGroup;
 			children = (
+				706A14291CD661FB00B7ED4C /* Controller */,
+				706A14281CD661F200B7ED4C /* View */,
+				706A14271CD661E900B7ED4C /* Model */,
 				706A14121CD6499800B7ED4C /* AppDelegate.swift */,
-				706A14141CD6499800B7ED4C /* LoginVC.swift */,
 				706A14161CD6499800B7ED4C /* Main.storyboard */,
 				706A14191CD6499800B7ED4C /* Assets.xcassets */,
 				706A141B1CD6499800B7ED4C /* LaunchScreen.storyboard */,
@@ -80,6 +84,29 @@
 				706A14241CD64A7100B7ED4C /* Brain Teaser-Bridging-Header.h */,
 			);
 			path = "Brain Teaser";
+			sourceTree = "<group>";
+		};
+		706A14271CD661E900B7ED4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		706A14281CD661F200B7ED4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				706A142A1CD6621A00B7ED4C /* CustomTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		706A14291CD661FB00B7ED4C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				706A14141CD6499800B7ED4C /* LoginVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		7F7C57436B57E48B95E040D0 /* Frameworks */ = {
@@ -214,6 +241,7 @@
 			files = (
 				706A14151CD6499800B7ED4C /* LoginVC.swift in Sources */,
 				706A14131CD6499800B7ED4C /* AppDelegate.swift in Sources */,
+				706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
