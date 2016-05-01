@@ -13,6 +13,7 @@
 		706A141A1CD6499800B7ED4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A14191CD6499800B7ED4C /* Assets.xcassets */; };
 		706A141D1CD6499800B7ED4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A141B1CD6499800B7ED4C /* LaunchScreen.storyboard */; };
 		706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142A1CD6621A00B7ED4C /* CustomTextField.swift */; };
+		706A142D1CD6642A00B7ED4C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142C1CD6642A00B7ED4C /* CustomButton.swift */; };
 		DCCD6DA82B41C81CA1B63C69 /* Pods_Brain_Teaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		706A141E1CD6499800B7ED4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706A14241CD64A7100B7ED4C /* Brain Teaser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brain Teaser-Bridging-Header.h"; sourceTree = "<group>"; };
 		706A142A1CD6621A00B7ED4C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		706A142C1CD6642A00B7ED4C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brain_Teaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				706A142A1CD6621A00B7ED4C /* CustomTextField.swift */,
+				706A142C1CD6642A00B7ED4C /* CustomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706A142D1CD6642A00B7ED4C /* CustomButton.swift in Sources */,
 				706A14151CD6499800B7ED4C /* LoginVC.swift in Sources */,
 				706A14131CD6499800B7ED4C /* AppDelegate.swift in Sources */,
 				706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */,
