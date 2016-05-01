@@ -11,15 +11,25 @@ import pop
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var loginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var emailConstraint: NSLayoutConstraint!
+    @IBOutlet weak var passwordConstraint: NSLayoutConstraint!
+    
+    var animEngine: AnimationEngine!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        animEngine = AnimationEngine(constraints: [emailConstraint, passwordConstraint, loginConstraint])
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        animEngine.animateOnScreen(1)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
 
 
 }

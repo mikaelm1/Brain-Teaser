@@ -158,6 +158,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="I82-Mk-RH1" firstAttribute="centerX" secondItem="OmT-eP-wRN" secondAttribute="centerX" id="0a8-EF-UHZ"/>
+                            <constraint firstItem="BGq-KC-fcj" firstAttribute="centerX" secondItem="I82-Mk-RH1" secondAttribute="centerX" id="BDL-lm-YmF"/>
                             <constraint firstItem="gBx-tS-YfI" firstAttribute="top" secondItem="i1F-0Z-dAR" secondAttribute="bottom" constant="10" id="EAt-BN-gJ3"/>
                             <constraint firstItem="HMS-Kb-ajN" firstAttribute="centerX" secondItem="BGq-KC-fcj" secondAttribute="centerX" id="GlD-0B-Ba4"/>
                             <constraint firstItem="gBx-tS-YfI" firstAttribute="centerX" secondItem="OmT-eP-wRN" secondAttribute="centerX" id="JJC-8Q-ftT"/>
@@ -167,6 +168,11 @@
                             <constraint firstItem="I82-Mk-RH1" firstAttribute="top" secondItem="gBx-tS-YfI" secondAttribute="bottom" constant="35" id="xAl-HA-1rn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailConstraint" destination="0a8-EF-UHZ" id="kWP-Mb-5j8"/>
+                        <outlet property="loginConstraint" destination="GlD-0B-Ba4" id="SbU-IR-DaG"/>
+                        <outlet property="passwordConstraint" destination="cte-zc-yr5" id="oPU-no-rxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CM5-3b-NnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

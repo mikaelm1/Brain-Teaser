@@ -14,6 +14,7 @@
 		706A141D1CD6499800B7ED4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706A141B1CD6499800B7ED4C /* LaunchScreen.storyboard */; };
 		706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142A1CD6621A00B7ED4C /* CustomTextField.swift */; };
 		706A142D1CD6642A00B7ED4C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142C1CD6642A00B7ED4C /* CustomButton.swift */; };
+		706A14301CD674EF00B7ED4C /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142F1CD674EF00B7ED4C /* AnimationEngine.swift */; };
 		DCCD6DA82B41C81CA1B63C69 /* Pods_Brain_Teaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		706A14241CD64A7100B7ED4C /* Brain Teaser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brain Teaser-Bridging-Header.h"; sourceTree = "<group>"; };
 		706A142A1CD6621A00B7ED4C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		706A142C1CD6642A00B7ED4C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		706A142F1CD674EF00B7ED4C /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brain_Teaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		706A14111CD6499700B7ED4C /* Brain Teaser */ = {
 			isa = PBXGroup;
 			children = (
+				706A142E1CD674E100B7ED4C /* Util */,
 				706A14291CD661FB00B7ED4C /* Controller */,
 				706A14281CD661F200B7ED4C /* View */,
 				706A14271CD661E900B7ED4C /* Model */,
@@ -110,6 +113,14 @@
 				706A14141CD6499800B7ED4C /* LoginVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		706A142E1CD674E100B7ED4C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				706A142F1CD674EF00B7ED4C /* AnimationEngine.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		7F7C57436B57E48B95E040D0 /* Frameworks */ = {
@@ -245,6 +256,7 @@
 				706A142D1CD6642A00B7ED4C /* CustomButton.swift in Sources */,
 				706A14151CD6499800B7ED4C /* LoginVC.swift in Sources */,
 				706A14131CD6499800B7ED4C /* AppDelegate.swift in Sources */,
+				706A14301CD674EF00B7ED4C /* AnimationEngine.swift in Sources */,
 				706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
