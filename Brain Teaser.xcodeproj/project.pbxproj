@@ -15,6 +15,9 @@
 		706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142A1CD6621A00B7ED4C /* CustomTextField.swift */; };
 		706A142D1CD6642A00B7ED4C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142C1CD6642A00B7ED4C /* CustomButton.swift */; };
 		706A14301CD674EF00B7ED4C /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A142F1CD674EF00B7ED4C /* AnimationEngine.swift */; };
+		706A14321CD6D14600B7ED4C /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A14311CD6D14600B7ED4C /* GameVC.swift */; };
+		706A14341CD6D2B600B7ED4C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A14331CD6D2B600B7ED4C /* Card.swift */; };
+		706A14361CD6D2C800B7ED4C /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706A14351CD6D2C700B7ED4C /* Card.xib */; };
 		DCCD6DA82B41C81CA1B63C69 /* Pods_Brain_Teaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		706A142A1CD6621A00B7ED4C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		706A142C1CD6642A00B7ED4C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		706A142F1CD674EF00B7ED4C /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
+		706A14311CD6D14600B7ED4C /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		706A14331CD6D2B600B7ED4C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		706A14351CD6D2C700B7ED4C /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 		DF25B3CE0D2093766FE0D1A0 /* Pods_Brain_Teaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brain_Teaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +109,8 @@
 			children = (
 				706A142A1CD6621A00B7ED4C /* CustomTextField.swift */,
 				706A142C1CD6642A00B7ED4C /* CustomButton.swift */,
+				706A14331CD6D2B600B7ED4C /* Card.swift */,
+				706A14351CD6D2C700B7ED4C /* Card.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				706A14141CD6499800B7ED4C /* LoginVC.swift */,
+				706A14311CD6D14600B7ED4C /* GameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 				706A141D1CD6499800B7ED4C /* LaunchScreen.storyboard in Resources */,
 				706A141A1CD6499800B7ED4C /* Assets.xcassets in Resources */,
 				706A14181CD6499800B7ED4C /* Main.storyboard in Resources */,
+				706A14361CD6D2C800B7ED4C /* Card.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +265,10 @@
 			files = (
 				706A142D1CD6642A00B7ED4C /* CustomButton.swift in Sources */,
 				706A14151CD6499800B7ED4C /* LoginVC.swift in Sources */,
+				706A14341CD6D2B600B7ED4C /* Card.swift in Sources */,
 				706A14131CD6499800B7ED4C /* AppDelegate.swift in Sources */,
 				706A14301CD674EF00B7ED4C /* AnimationEngine.swift in Sources */,
+				706A14321CD6D14600B7ED4C /* GameVC.swift in Sources */,
 				706A142B1CD6621A00B7ED4C /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

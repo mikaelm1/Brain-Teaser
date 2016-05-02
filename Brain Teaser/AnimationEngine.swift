@@ -68,11 +68,27 @@ class AnimationEngine {
             } while index < self.constraints.count
             
         }
-        
-        
+    }
+    
+    class func animateToPosition(view: UIView, position: CGPoint, completionBlock: ((POPAnimation!, Bool) -> Void)!) {
+        // Use this method to animate any view to any position
+        let moveAnim = POPSpringAnimation(propertyNamed: kPOPLayerPosition)
+        moveAnim.toValue = NSValue(CGPoint: position)
+        moveAnim.springBounciness = 8
+        moveAnim.springSpeed = 8
+        moveAnim.completionBlock = completionBlock
+        view.pop_addAnimation(moveAnim, forKey: "moveToPosition")
     }
     
 }
+
+
+
+
+
+
+
+
 
 
 
