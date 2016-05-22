@@ -11,6 +11,8 @@ import pop
 
 class GameVC: UIViewController {
     
+    @IBOutlet weak var wrongLabel: UILabel!
+    @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
@@ -20,11 +22,18 @@ class GameVC: UIViewController {
     var currentShape: String!
     var previousShape: String!
     var answer = ""
+    var numCorrect = 0
+    var numWrong = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         currentCard = createCardFromNib()
+        
+        resetShape()
+        
+        wrongLabel.text = "Wrong: \(numWrong)"
+        correctLabel.text = "Correct: \(numCorrect)"
         
         // the center of our card is the center of the screen
         currentCard.center = AnimationEngine.screenCenterPosition
@@ -50,6 +59,8 @@ class GameVC: UIViewController {
             checkAnswer()
         } else {
             titleLabel.text = "Does this card match the previous?"
+            noButton.hidden = false
+            yesButton.setTitle("YES", forState: .Normal)
         }
         showNextCard()
     }
@@ -64,16 +75,32 @@ class GameVC: UIViewController {
         if answer == "yes" {
             if currentShape == previousShape {
                 print("Correct")
+                numCorrect += 1
+                correctLabel.text = "Correct: \(numCorrect)"
             } else {
                 print("Wrong")
+                numWrong += 1
+                wrongLabel.text = "Wrong: \(numWrong)"
             }
         } else if answer == "no" {
             if currentShape != previousShape {
                 print("Correct")
+                numCorrect += 1
+                correctLabel.text = "Correct: \(numCorrect)"
             } else {
                 print("Wrong")
+                numWrong += 1
+                wrongLabel.text = "Wrong: \(numWrong)"
             }
         }
+        resetShape()
+    }
+    
+    func resetShape() {
+        
+        titleLabel.text = "Remember this image"
+        noButton.hidden = true
+        yesButton.setTitle("START", forState: .Normal)
     }
     
     func showNextCard() {
@@ -97,11 +124,6 @@ class GameVC: UIViewController {
             next.shapeImage.image = UIImage(named: currentShape)
             self.view.addSubview(next)
             currentCard = next
-            
-            if noButton.hidden {
-                noButton.hidden = false
-                yesButton.setTitle("YES", forState: .Normal)
-            }
             
             let pos = CGPointMake(UIScreen.mainScreen().bounds.width * 0.5, UIScreen.mainScreen().bounds.height * 0.5)
             AnimationEngine.animateToPosition(next, position: pos, completionBlock: { (animation, finished) in
