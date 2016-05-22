@@ -80,6 +80,16 @@ class AnimationEngine {
         view.pop_addAnimation(moveAnim, forKey: "moveToPosition")
     }
     
+    func animateConToPosition(constraint: NSLayoutConstraint, position: CGPoint, completionHandler: ((POPAnimation!, Bool) -> Void)) {
+        
+        let moveAnim = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+        moveAnim.toValue = NSValue(CGPoint: position)
+        moveAnim.springSpeed = 8
+        moveAnim.springBounciness = 8
+        moveAnim.completionBlock = completionHandler
+        constraint.pop_addAnimation(moveAnim, forKey: "animateToPosition")
+    }
+    
 }
 
 

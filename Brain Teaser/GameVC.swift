@@ -16,6 +16,10 @@ class GameVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var currentCard: Card!
+    var shape: Shape!
+    var currentShape: String!
+    var previousShape: String!
+    var answer = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,12 @@ class GameVC: UIViewController {
         
         // the center of our card is the center of the screen
         currentCard.center = AnimationEngine.screenCenterPosition
+        
+        shape = Shape()
+        currentShape = shape.selectShape()
+        previousShape = ""
+        currentCard.shapeImage.image = UIImage(named: currentShape)
+        
         self.view.addSubview(currentCard)
         
         
@@ -36,6 +46,7 @@ class GameVC: UIViewController {
     
     @IBAction func yesPressed(sender: UIButton) {
         if sender.titleLabel?.text == "YES" {
+            answer = "yes"
             checkAnswer()
         } else {
             titleLabel.text = "Does this card match the previous?"
@@ -44,12 +55,25 @@ class GameVC: UIViewController {
     }
     
     @IBAction func noPressed(sender: UIButton) {
+        answer = "no"
         checkAnswer()
         showNextCard()
     }
     
     func checkAnswer() {
-        
+        if answer == "yes" {
+            if currentShape == previousShape {
+                print("Correct")
+            } else {
+                print("Wrong")
+            }
+        } else if answer == "no" {
+            if currentShape != previousShape {
+                print("Correct")
+            } else {
+                print("Wrong")
+            }
+        }
     }
     
     func showNextCard() {
@@ -67,6 +91,10 @@ class GameVC: UIViewController {
         if let next = createCardFromNib() {
             // As soon as we create the new card, we throw it off screen
             next.center = AnimationEngine.offScreenRightPosition
+            next.frame.size = fitCardToScreen()
+            previousShape = currentShape
+            currentShape = shape.selectShape()
+            next.shapeImage.image = UIImage(named: currentShape)
             self.view.addSubview(next)
             currentCard = next
             
@@ -75,7 +103,8 @@ class GameVC: UIViewController {
                 yesButton.setTitle("YES", forState: .Normal)
             }
             
-            AnimationEngine.animateToPosition(next, position: AnimationEngine.screenCenterPosition, completionBlock: { (animation, finished) in
+            let pos = CGPointMake(UIScreen.mainScreen().bounds.width * 0.5, UIScreen.mainScreen().bounds.height * 0.5)
+            AnimationEngine.animateToPosition(next, position: pos, completionBlock: { (animation, finished) in
                 // do something 
             })
         }
@@ -83,6 +112,11 @@ class GameVC: UIViewController {
     
     func createCardFromNib() -> Card? {
         return NSBundle.mainBundle().loadNibNamed("Card", owner: self, options: nil)[0] as? Card
+    }
+    
+    func fitCardToScreen() -> CGSize {
+        let screen = UIScreen.mainScreen().bounds
+        return CGSizeMake(screen.width * 0.8, screen.height * 0.4)
     }
     
 

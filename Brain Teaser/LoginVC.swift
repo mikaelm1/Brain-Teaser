@@ -14,7 +14,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var loginConstraint: NSLayoutConstraint!
     @IBOutlet weak var emailConstraint: NSLayoutConstraint!
     @IBOutlet weak var passwordConstraint: NSLayoutConstraint!
-    
+        
     var animEngine: AnimationEngine!
     
     override func viewDidLoad() {
@@ -30,7 +30,13 @@ class LoginVC: UIViewController {
     }
 
 
-
-
 }
+
+
+
+
+
+
+
+
 

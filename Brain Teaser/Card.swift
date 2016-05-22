@@ -9,10 +9,6 @@
 import UIKit
 
 class Card: UIView {
-
-    let shapes = ["shape1", "shape2", "shape3"]
-    
-    var currentShape: String!
     
     @IBOutlet weak var shapeImage: UIImageView!
     
@@ -30,7 +26,6 @@ class Card: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
-        selectShape()
     }
     
     func setupView() {
@@ -43,10 +38,6 @@ class Card: UIView {
         self.setNeedsLayout()
     }
     
-    func selectShape() {
-        currentShape = shapes[Int(arc4random_uniform(3))]
-        shapeImage.image = UIImage(named: currentShape)
-    }
 
 }
 
